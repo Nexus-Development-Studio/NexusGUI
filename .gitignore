@@ -22,3 +22,4 @@ run/
 fabric-test/
 /target/
 /triumph-gui.iml
+/NexusGUI.iml

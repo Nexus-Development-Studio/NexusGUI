@@ -71,7 +71,7 @@ public abstract class BaseItemBuilder<B extends BaseItemBuilder<B>> {
     @NotNull
     @Contract("_ -> this")
     public B name(@NotNull final Component name) {
-        nameLoreHandler.name(meta, name);
+        nameLoreHandler.name(meta == null ? Bukkit.getItemFactory().getItemMeta(itemStack.getType()) : meta, name);
         return (B) this;
     }
 
