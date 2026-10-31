@@ -67,6 +67,9 @@ public final class SkullUtil {
      * @return the url of the texture if found, otherwise {@code null}
      */
     public static String getSkinUrl(String base64Texture) {
+        if (base64Texture == null || base64Texture.isEmpty()) {
+            return null;
+        }
         final String decoded = new String(Base64.getDecoder().decode(base64Texture));
         final JsonObject object = GSON.fromJson(decoded, JsonObject.class);
 
